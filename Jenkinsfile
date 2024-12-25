@@ -6,7 +6,7 @@
  stages {
  stage('Checkout') {
  steps {
- git branch: 'coba1', url: 'https://github.com/GIA-003/prak10-ppmpl.git'
+ git branch: 'coba2', url: 'https://github.com/GIA-003/prak10-ppmpl.git'
  }
  }
  stage('Install Dependencies') {
