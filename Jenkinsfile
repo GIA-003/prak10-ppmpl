@@ -23,6 +23,7 @@ pipeline {
                 anyOf {
                     branch 'main'
                     branch 'coba1'
+                    branch 'coba2'
                 }
             }
             steps {
@@ -32,6 +33,7 @@ pipeline {
         stage('Run Integration Tests') {
             when {
                 branch 'main'
+                branch 'coba2'
             }
             steps {
                 bat 'npm run test:integration'
@@ -46,6 +48,7 @@ pipeline {
         stage('Deploy to Staging') {
             when {
                 branch 'main'
+                branch 'coba2'
             }
             steps {
                 echo 'Deploying to staging server...'
